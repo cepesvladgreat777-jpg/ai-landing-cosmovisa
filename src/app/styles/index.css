@@ -1,0 +1,12 @@
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700&family=Unbounded:wght@400;500;600;700&display=swap');
+@import '../../shared/styles/tokens.css';
+@import './base.css';
+@import './surfaces.css';
+@import '../../shared/ui/wordmark/styles.css';
+@import '../../features/screensaver/styles.css';
+@import '../../features/hero/styles.css';
+@import './motion.css';
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;

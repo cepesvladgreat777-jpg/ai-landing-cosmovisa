@@ -1,0 +1,13 @@
+:root {
+  --font-body: 'Manrope', sans-serif;
+  --font-display: 'Unbounded', sans-serif;
+  --color-page: 19 44 99;
+  --color-soft: 32 74 138;
+  --color-deep: 16 34 77;
+  --color-line: 83 122 255;
+  --color-accent: 57 243 255;
+  --color-accent-hover: 163 252 255;
+  --color-ink: 243 250 255;
+  --color-muted: 195 216 255;
+  --color-contrast: 9 35 75;
+}

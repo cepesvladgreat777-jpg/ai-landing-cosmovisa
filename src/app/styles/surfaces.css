@@ -1,0 +1,39 @@
+.surface-card {
+  border: 1px solid rgba(86, 208, 255, 0.7);
+  background-image: linear-gradient(
+    135deg,
+    rgba(57, 243, 255, 0.09),
+    transparent 50%,
+    rgba(221, 78, 255, 0.14)
+  );
+  box-shadow:
+    0 12px 35px rgba(5, 16, 66, 0.25),
+    inset 0 1px 0 rgba(172, 249, 255, 0.2),
+    0 0 26px rgba(87, 109, 255, 0.18);
+}
+
+section.bg-brand-page:not(#top),
+section.bg-brand-soft,
+section.bg-brand-deep,
+footer.bg-brand-deep {
+  --section-glow:
+    radial-gradient(ellipse at 0% 15%, rgba(22, 227, 255, 0.19), transparent 58%),
+    radial-gradient(ellipse at 100% 85%, rgba(215, 65, 255, 0.2), transparent 60%);
+  background-image: var(--section-glow);
+}
+
+#about {
+  background-image:
+    linear-gradient(to bottom, rgb(var(--color-page)), rgb(var(--color-page) / 0) 96px), var(--section-glow);
+}
+
+a.bg-brand-accent,
+button.bg-brand-accent {
+  box-shadow:
+    0 0 18px rgba(57, 243, 255, 0.3),
+    0 0 36px rgba(102, 92, 255, 0.18);
+}
+
+.service-art {
+  background: linear-gradient(135deg, #c3fbff, #64dfff 50%, #cf9cff);
+}

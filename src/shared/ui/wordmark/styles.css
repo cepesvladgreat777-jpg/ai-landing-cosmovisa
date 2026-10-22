@@ -1,0 +1,120 @@
+.rest-wordmark-overlay {
+  position: absolute;
+  inset: 0;
+  z-index: 30;
+  pointer-events: none;
+  user-select: none;
+}
+
+.rest-wordmark-anchor {
+  position: absolute;
+  top: 30%;
+  width: max(0px, calc((100vw - 100%) / 2 - 32px));
+  container-type: inline-size;
+}
+
+.rest-wordmark-anchor--left {
+  right: calc(100% + 16px);
+  text-align: right;
+}
+
+.rest-wordmark-anchor--right {
+  left: calc(100% + 16px);
+  text-align: left;
+}
+
+.rest-wordmark {
+  position: relative;
+  white-space: nowrap;
+}
+
+.rest-wordmark-float {
+  display: inline-block;
+  text-shadow: 0 0 18px rgba(102, 193, 255, 0.35);
+  animation: wordmarkFloat 7s ease-in-out infinite;
+}
+
+.rest-wordmark-letter {
+  display: inline-block;
+  will-change: transform, opacity;
+  font-family: var(--font-display);
+  font-size: min(23cqw, 10rem);
+  font-weight: 500;
+  line-height: 1.2;
+  letter-spacing: 0.03em;
+  color: #9be5ff;
+  background: linear-gradient(160deg, #edffff 8%, #39f3ff 48%, #ed8dff 95%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* Keep both halves readable when the foreground fills a narrow screen. */
+@media (max-width: 900px) {
+  .rest-wordmark-overlay {
+    left: 50%;
+    right: auto;
+    width: 100vw;
+    transform: translateX(-50%);
+  }
+
+  .rest-wordmark-anchor {
+    width: calc(50% - 32px);
+  }
+
+  .rest-wordmark-anchor--left {
+    left: 16px;
+    right: auto;
+    text-align: left;
+  }
+
+  .rest-wordmark-anchor--right {
+    left: auto;
+    right: 16px;
+    text-align: right;
+  }
+}
+
+.rest-wordmark-spark {
+  position: absolute;
+  border-radius: 50%;
+  box-shadow: 0 0 8px currentColor;
+}
+
+.rest-wordmark-ring {
+  position: absolute;
+  left: -15%;
+  top: 12.5%;
+  width: 130%;
+  height: 75%;
+  border: 2px solid;
+  border-color: #c4f3ff #7bdeff rgba(173, 160, 241, 0.1) rgba(123, 222, 255, 0.35);
+  border-radius: 50%;
+  box-shadow:
+    0 0 18px rgba(123, 222, 255, 0.55),
+    inset 0 0 12px rgba(173, 160, 241, 0.2);
+}
+
+.rest-wordmark-ring::after {
+  content: '';
+  position: absolute;
+  top: 13%;
+  right: 12%;
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  background: #edf8ff;
+  box-shadow:
+    0 0 10px #7bdeff,
+    0 0 22px #ada0f1;
+}
+
+@keyframes wordmarkFloat {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-9px);
+  }
+}

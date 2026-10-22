@@ -1,0 +1,1 @@
+export { AnimatedWordmark } from './AnimatedWordmark';
