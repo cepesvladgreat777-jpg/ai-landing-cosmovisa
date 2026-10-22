@@ -1,4 +1,5 @@
 import type { RefObject } from 'react';
+import { publicAsset } from '../../../shared/lib/publicAsset';
 import { HERO_MEDIA } from '../config';
 import { HeroWordmark } from './HeroWordmark';
 import type { HeroWordmarkHandle } from '../lib/createHeroWordmarkController';
@@ -13,8 +14,8 @@ export function HeroMedia({ videoRef, videoReady, wordmarkRef }: HeroMediaProps)
   return (
     <>
       <video
-        src={HERO_MEDIA.background}
-        poster={HERO_MEDIA.poster}
+        src={publicAsset(HERO_MEDIA.background)}
+        poster={publicAsset(HERO_MEDIA.poster)}
         autoPlay
         loop
         muted
@@ -34,7 +35,7 @@ export function HeroMedia({ videoRef, videoReady, wordmarkRef }: HeroMediaProps)
           <div className="hero-video-halo" aria-hidden="true" />
           <video
             ref={videoRef}
-            src={HERO_MEDIA.foreground}
+            src={publicAsset(HERO_MEDIA.foreground)}
             muted
             playsInline
             preload="auto"

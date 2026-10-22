@@ -42,7 +42,7 @@ test('refactoring preserves page text, section IDs, anchors and service images',
     if (link.startsWith('#')) assert.ok(ids.includes(link.slice(1)), `Missing anchor: ${link}`);
   assert.deepEqual(
     [...html.matchAll(/<img[^>]+>/g)].map((match) => match[0]),
-    baseline.images,
+    baseline.images.map((image) => image.replace('src="/', 'src="./')),
   );
   assert.ok(
     !html.includes('mailto:') && !html.includes('tel:'),

@@ -1,5 +1,6 @@
 import { ArrowDown, ArrowUpRight } from 'lucide-react';
 import type { Service } from '../../../shared/types/content';
+import { publicAsset } from '../../../shared/lib/publicAsset';
 
 export function ServiceCard({ service: card }: { service: Service }) {
   return (
@@ -10,7 +11,7 @@ export function ServiceCard({ service: card }: { service: Service }) {
       {/* image panel */}
       <div className="service-art relative aspect-[4/3] shrink-0 rounded-xl overflow-hidden border border-brand-line">
         <img
-          src={card.image}
+          src={publicAsset(card.image)}
           alt={card.alt}
           loading="lazy"
           className="absolute inset-0 w-full h-full object-contain px-5 pt-6 pb-9 transition-transform duration-[1.4s] ease-[cubic-bezier(0.16,1,0.3,1)] group-hover:scale-[1.04]"
